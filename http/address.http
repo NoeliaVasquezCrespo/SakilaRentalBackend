@@ -1,0 +1,33 @@
+###---------------------------ADDRESS--------------------------###
+
+### 5. Mostrar ubicación de las tiendas
+GET http://localhost:3000/address
+Content-Type: application/json
+
+### 6. Mostrar dirección de un cliente
+GET http://localhost:3000/address/1
+Content-Type: application/json
+
+### 7. Modificar dirección de un cliente
+PUT http://localhost:3000/address/5
+Content-Type: application/json
+
+{
+    "address": "191388 Hanoi Way",
+    "address2": " ",
+    "district": "Nagasaki",
+    "phone": "123456789"
+}
+
+### 8. Agregar dirección
+POST http://localhost:3000/address
+Content-Type: application/json
+
+{
+    "address": "2610 Blecker Street",
+    "address2": "Georgia Town",
+    "district": "Cruise",
+    "city_id": 1,
+    "postal_code":"4321",
+    "phone": "987654321"
+}

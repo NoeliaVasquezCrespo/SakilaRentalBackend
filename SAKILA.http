@@ -1,0 +1,306 @@
+###---------------------------ACTOR--------------------------###
+
+### 1. Listar todos los actores
+GET http://localhost:3000/actor
+Content-Type: application/json
+
+### 2. Mostrar información de un actor
+GET http://localhost:3000/actors/3
+Content-Type: application/json
+
+### 3. Listar todas las películas de un actor según nombre y apellido
+GET http://localhost:3000/actor/penelope/guiness
+Content-Type: application/json
+
+### 4. Listar todas las películas de un actor según nombre
+GET http://localhost:3000/actor/ed
+Content-Type: application/json
+
+
+
+###---------------------------ADDRESS--------------------------###
+
+### 5. Mostrar ubicación de las tiendas
+GET http://localhost:3000/address
+Content-Type: application/json
+
+### 6. Mostrar dirección de un cliente
+GET http://localhost:3000/address/1
+Content-Type: application/json
+
+### 7. Modificar dirección de un cliente
+PUT http://localhost:3000/address/5
+Content-Type: application/json
+
+{
+    "address": "191388 Hanoi Way",
+    "address2": " ",
+    "district": "Nagasaki",
+    "phone": "123456789"
+}
+
+### 8. Agregar dirección
+POST http://localhost:3000/address
+Content-Type: application/json
+
+{
+    "address": "2610 Blecker Street",
+    "address2": "Georgia Town",
+    "district": "Cruise",
+    "city_id": 1,
+    "postal_code":"4321",
+    "phone": "987654321"
+}
+
+
+###---------------------------CATEGORY--------------------------###
+
+### 9. Listar las categorias de peliculas
+GET http://localhost:3000/category
+Content-Type: application/json
+
+### 10. Mostrar las peliculas con una categoria
+GET http://localhost:3000/category/4
+Content-Type: application/json
+
+
+
+###---------------------------CITY--------------------------###
+
+### 11. Listar las ciudades donde se encuentran las tiendas
+GET http://localhost:3000/city
+Content-Type: application/json
+
+### 12. Mostrar ciudades de los dos países
+GET http://localhost:3000/city/australia
+Content-Type: application/json
+
+
+
+###---------------------------COUNTRY--------------------------###
+
+### 13. Lista de Países donde se encuentran las tiendas
+GET http://localhost:3000/country
+Content-Type: application/json
+
+### 14. Lista de películas según el país
+GET http://localhost:3000/country/8
+Content-Type: application/json
+
+
+
+###---------------------------CUSTOMER--------------------------###
+
+### 15. Mostrar lista de clientes
+GET http://localhost:3000/customer
+Content-Type: application/json
+
+### 16. Mostrar información de clients según id
+GET http://localhost:3000/customer/1
+Content-Type: application/json
+
+### 17. Modificar información de un cliente
+PUT http://localhost:3000/customer/1
+Content-Type: application/json
+
+{
+    "first_name": "Zoe",
+    "last_name": "Murphy",
+    "email":"zoemurphy@gmail.com",
+    "active" : 1
+}
+
+### 18. Agregar nuevo cliente
+POST http://localhost:3000/customer
+Content-Type: application/json
+
+{
+    "store_id":1,
+    "first_name": "Sabrina",
+    "last_name": "Carpenter",
+    "email":"sabrinacarpenter@gmail.com",
+    "address_id":5
+}
+
+
+###---------------------------FILM--------------------------###
+
+### 19. Listar todas las películas
+GET http://localhost:3000/film
+Content-Type: application/json
+
+### 20. Mostrar información de una película
+GET http://localhost:3000/films/1002
+Content-Type: application/json
+
+### 21. Listar todas las películas por titulo
+GET http://localhost:3000/film/dear
+Content-Type: application/json
+
+### 22. Agregar película
+POST http://localhost:3000/film
+Content-Type: application/json
+
+{
+    "title":"Dear Evan Hansen",
+    "description":"Evan Hansen is a high school senior with social anxiety disorder. He embarks on a journey of self-discovery and acceptance following the suicide of a classmate",
+    "release_year": 2021 ,
+    "language_id": 1,
+    "rental_duration": 3,
+    "rental_rate": 4.99,
+    "length_":132,
+    "replacement_post":19.99,
+    "rating":"PG-13",
+    "special_features":"Deleted Scenes"
+}
+
+### 23. Mostrar películas por el rating
+GET http://localhost:3000/films/rate/1
+Content-Type: application/json
+
+
+
+###---------------------------FILM_ACTOR-------------------------###
+### 24. Listar todas las películas y actores
+GET http://localhost:3000/film_actor
+Content-Type: application/json
+
+
+### 25. Agregar actor en la película
+POST http://localhost:3000/film_actor
+Content-Type: application/json
+
+{
+    "film_id":1002,
+    "actor_id":1
+}
+
+###---------------------------INVENTORY--------------------------###
+
+### 26. Mostrar información de inventario agrupados
+GET http://localhost:3000/inventory
+Content-Type: application/json
+
+### 27. Mostrar inventario según la tienda
+GET http://localhost:3000/inventory/1
+Content-Type: application/json
+
+### 28. Mostrar dato de inventario
+GET http://localhost:3000/inventoryt/888
+Content-Type: application/
+
+### 29. Agregar inventario
+POST http://localhost:3000/inventory
+Content-Type: application/json
+
+{
+    "film_id":38,
+    "store_id":1
+}
+
+
+###---------------------------LANGUAGE--------------------------###
+
+### 30. Lista de idiomas 
+GET http://localhost:3000/language
+Content-Type: application/json
+
+
+
+###---------------------------PAYMENT--------------------------###
+
+### 31. Lista de Pagos
+GET http://localhost:3000/payment
+Content-Type: application/json
+
+### 32. Lista de Pagos de un cliente
+GET http://localhost:3000/payment/barbara/jones
+Content-Type: application/json
+
+### 33. Lista de Pagos por id 
+GET http://localhost:3000/payment/1
+Content-Type: application/json
+
+### 34. Agregar información de un nuevo pago
+POST http://localhost:3000/payment
+Content-Type: application/json
+
+{
+    "customer_id" : 3,
+    "staff_id" : 5,
+    "rental_id" : 3,
+    "amount" : 3.99
+}    
+
+
+###---------------------------RENTAL--------------------------###
+
+### 35. Mostrar datos de rental
+GET http://localhost:3000/rental
+Content-Type: application/json
+
+### 36. Mostrar un sólo dato de rental
+GET http://localhost:3000/rental/1
+Content-Type: application/json
+
+### 37. Listar todas las películas que rentó un cliente
+GET http://localhost:3000/rental/zoe/murphy
+Content-Type: application/json
+
+### 38. Agregar datos en rental
+POST http://localhost:3000/rental
+Content-Type: application/json
+
+{
+    "rental_date":"2021-10-15 23:24:09",
+    "inventory_id": 1,
+    "customer_id" : 1,
+    "return_date": "2021-10-25 23:24:09",
+    "staff_id": 1
+}
+
+###---------------------------STAFF--------------------------###
+
+### 39. Lista de Staff
+GET http://localhost:3000/staff
+Content-Type: application/json
+
+### 40. Información de staff por nombre
+GET http://localhost:3000/staff/ed/sheeran
+Content-Type: application/json
+
+### 41. Información de staff por id
+GET http://localhost:3000/staff/1
+Content-Type: application/json
+
+### 42. Agregar información de un nuevo pago
+POST http://localhost:3000/staff
+Content-Type: application/json
+
+{
+    "first_name" : "Ed",
+    "last_name" : "Sheeran",
+    "address_id" : 5,
+    "email" : "edsheeran@gmail.com",
+    "store_id" : 1,
+    "username" : "Ed",
+    "password" : "456789"
+}    
+
+### 43. Modificar información de staff
+PUT http://localhost:3000/staff/1
+Content-Type: application/json
+
+{
+    "first_name" : "Ben",
+    "last_name" : "Platt",
+    "email" : "benji@gmail.com",
+    "active" : 1
+}  
+
+
+###---------------------------STORE--------------------------###
+
+### 44. Lista de Tiendas
+GET http://localhost:3000/store
+Content-Type: application/json

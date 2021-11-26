@@ -1,0 +1,5 @@
+###---------------------------STORE--------------------------###
+
+### 44. Lista de Tiendas
+GET http://localhost:3000/store
+Content-Type: application/json

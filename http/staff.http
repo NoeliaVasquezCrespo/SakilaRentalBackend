@@ -1,0 +1,38 @@
+###---------------------------STAFF--------------------------###
+
+### 39. Lista de Staff
+GET http://localhost:3000/staff
+Content-Type: application/json
+
+### 40. Información de staff por nombre
+GET http://localhost:3000/staff/ed/sheeran
+Content-Type: application/json
+
+### 41. Información de staff por id
+GET http://localhost:3000/staff/1
+Content-Type: application/json
+
+### 42. Agregar información de un nuevo pago
+POST http://localhost:3000/staff
+Content-Type: application/json
+
+{
+    "first_name" : "Ed",
+    "last_name" : "Sheeran",
+    "address_id" : 5,
+    "email" : "edsheeran@gmail.com",
+    "store_id" : 1,
+    "username" : "Ed",
+    "password" : "456789"
+}    
+
+### 43. Modificar información de staff
+PUT http://localhost:3000/staff/1
+Content-Type: application/json
+
+{
+    "first_name" : "Ben",
+    "last_name" : "Platt",
+    "email" : "benji@gmail.com",
+    "active" : 1
+}  

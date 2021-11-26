@@ -1,0 +1,18 @@
+###---------------------------ACTOR--------------------------###
+
+### 1. Listar todos los actores
+GET http://localhost:3000/actor
+Content-Type: application/json
+
+### 2. Mostrar información de un actor
+GET http://localhost:3000/actors/3
+Content-Type: application/json
+
+### 3. Listar todas las películas de un actor según nombre y apellido
+GET http://localhost:3000/actor/penelope/guiness
+Content-Type: application/json
+
+### 4. Listar todas las películas de un actor según nombre
+GET http://localhost:3000/actor/ed
+Content-Type: application/json
+

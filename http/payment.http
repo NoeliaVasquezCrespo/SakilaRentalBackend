@@ -1,0 +1,24 @@
+###---------------------------PAYMENT--------------------------###
+
+### 31. Lista de Pagos
+GET http://localhost:3000/payment
+Content-Type: application/json
+
+### 32. Lista de Pagos de un cliente
+GET http://localhost:3000/payment/barbara/jones
+Content-Type: application/json
+
+### 33. Lista de Pagos por id 
+GET http://localhost:3000/payment/1
+Content-Type: application/json
+
+### 34. Agregar información de un nuevo pago
+POST http://localhost:3000/payment
+Content-Type: application/json
+
+{
+    "customer_id" : 3,
+    "staff_id" : 5,
+    "rental_id" : 3,
+    "amount" : 3.99
+}    

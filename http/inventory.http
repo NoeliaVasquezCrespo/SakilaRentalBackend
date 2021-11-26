@@ -1,0 +1,22 @@
+###---------------------------INVENTORY--------------------------###
+
+### 26. Mostrar información de inventario agrupados
+GET http://localhost:3000/inventory
+Content-Type: application/json
+
+### 27. Mostrar inventario según la tienda
+GET http://localhost:3000/inventory/1
+Content-Type: application/json
+
+### 28. Mostrar dato de inventario
+GET http://localhost:3000/inventoryt/888
+Content-Type: application/
+
+### 29. Agregar inventario
+POST http://localhost:3000/inventory
+Content-Type: application/json
+
+{
+    "film_id":38,
+    "store_id":1
+}

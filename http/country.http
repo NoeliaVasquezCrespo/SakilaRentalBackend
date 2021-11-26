@@ -1,0 +1,9 @@
+###---------------------------COUNTRY--------------------------###
+
+### 13. Lista de Países donde se encuentran las tiendas
+GET http://localhost:3000/country
+Content-Type: application/json
+
+### 14. Lista de películas según el país
+GET http://localhost:3000/country/8
+Content-Type: application/json

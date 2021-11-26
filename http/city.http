@@ -1,0 +1,9 @@
+###---------------------------CITY--------------------------###
+
+### 11. Listar las ciudades donde se encuentran las tiendas
+GET http://localhost:3000/city
+Content-Type: application/json
+
+### 12. Mostrar ciudades de los dos países
+GET http://localhost:3000/city/australia
+Content-Type: application/json

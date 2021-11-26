@@ -1,0 +1,9 @@
+###---------------------------CATEGORY--------------------------###
+
+### 9. Listar las categorias de peliculas
+GET http://localhost:3000/category
+Content-Type: application/json
+
+### 10. Mostrar las peliculas con una categoria
+GET http://localhost:3000/category/4
+Content-Type: application/json
